@@ -6,6 +6,7 @@ public class Product
 {
     public string Name { get; set; }
     public decimal Price { get; set; }
+    public string Color { get; set; }
 }
 
 public class Program
@@ -15,13 +16,13 @@ public class Program
         List<Product> products = new List<Product>();
 
         // Mahsulot qo'shish
-        products.Add(new Product { Name = "Kitob", Price = 25.50m });
-        products.Add(new Product { Name = "Dastur", Price = 100.00m });
+        products.Add(new Product { Name = "Kitob", Price = 25.50m ,Color= "pink"});
+        products.Add(new Product { Name = "Dastur", Price = 100.00m ,Color="Black"});
 
         // Mahsulotlarni chiqarish
         foreach (var product in products)
         {
-            Console.WriteLine($"{product.Name} - {product.Price}");
+            Console.WriteLine($"{product.Name} - {product.Price},{product.Color}");
         }
     }
 }
