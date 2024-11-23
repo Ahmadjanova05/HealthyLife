@@ -1,2 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+foreach (var product in products)
+{
+    if (product != null && !string.IsNullOrEmpty(product.Name))
+    {
+        Console.WriteLine($"{product.Name} - {product.Price}");
+    }
+    else
+    {
+        Console.WriteLine("neznayu.");
+    }
+}
